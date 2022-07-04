@@ -312,12 +312,12 @@ jobs:
             
   succss_notification:
     docker:
-      image: cimg/base:stable        
+      - image: cimg/base:stable        
     steps:
-      notify/slack:
-        event: pass
-        channel: udapeople-alerting
-        template: success_tagged_deploy_1
+      - notify/slack:
+          event: pass
+          channel: udapeople-alerting
+          template: success_tagged_deploy_1
 
 workflows:
   Give Your Application Auto-deploy Superpowers:
