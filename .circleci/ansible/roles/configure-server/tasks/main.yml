@@ -5,10 +5,10 @@
   shell: |
     curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
-- name: "install nodejs 13"
+- name: "install nodejs 14"
   become: true
   apt: 
-    name: ["node.js"]
+    name: ["nodejs"]
     state: latest
     update_cache: yes
 
