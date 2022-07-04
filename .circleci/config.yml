@@ -314,7 +314,7 @@ jobs:
     docker:
       - image: cimg/base:stable        
     steps:
-      - notify/slack:
+      - slack/notify:
           event: pass
           channel: udapeople-alerting
           template: success_tagged_deploy_1
