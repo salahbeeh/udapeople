@@ -8,7 +8,7 @@ commands:
 
   failure_notifcation:
     steps:
-      - notify/slack:
+      - slack/notify:
           event: fail
           channel: udapeople-alerting
           template: basic_fail_1
