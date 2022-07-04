@@ -101,9 +101,9 @@ jobs:
       - run:
           name: Back-end build
           command: |
-             cd backend
-             npm install
-             npm run build
+            cd backend
+            npm install
+            npm run build
       - save_cache:
           paths: [backend/node_modules]
           key: backend-dependencies
@@ -119,9 +119,9 @@ jobs:
       - run:
           name: Front-end Unit Test
           command: |
-             cd frontend
-             npm install
-             npm test
+            cd frontend
+            npm install
+            npm test
       - failure_notifcation
 
   test-backend:
@@ -134,9 +134,9 @@ jobs:
       - run:
           name: Back-end Unit Test
           command: |
-             cd backend
-             npm install
-             npm test
+            cd backend
+            npm install
+            npm test
       - failure_notifcation
 
   scan-frontend:
@@ -149,10 +149,10 @@ jobs:
       - run:
           name: Front-end scan
           command: |
-             cd frontend
-             npm install
-            #  npm audit fix --force --audit-level=critical
-             npm audit --audit-level=critical
+            cd frontend
+            npm install
+            npm audit fix --force --audit-level=critical
+            npm audit --audit-level=critical
       - failure_notifcation
 
 
