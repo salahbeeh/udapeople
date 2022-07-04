@@ -69,7 +69,7 @@ commands:
 jobs:
   build-frontend:
     docker:
-      - image: cimg/node:13.8.0
+      - image: cimg/node:18.4.0
     steps:
       - checkout
       - restore_cache:
@@ -87,7 +87,7 @@ jobs:
 
   build-backend:
     docker:
-      - image: cimg/node:13.8.0
+      - image: cimg/node:18.4.0
     steps:
       - checkout
       - restore_cache:
@@ -105,7 +105,7 @@ jobs:
 
   test-frontend:
     docker:
-      - image: cimg/node:13.8.0
+      - image: cimg/node:18.4.0
     steps:
       - checkout
       - restore_cache:
@@ -120,7 +120,7 @@ jobs:
 
   test-backend:
     docker:
-      - image: cimg/node:13.8.0
+      - image: cimg/node:18.4.0
     steps:
       - checkout
       - restore_cache:
@@ -135,7 +135,7 @@ jobs:
 
   scan-frontend:
     docker:
-      - image: cimg/node:13.8.0
+      - image: cimg/node:18.4.0
     steps:
       - checkout
       - restore_cache:
@@ -152,7 +152,7 @@ jobs:
 
   scan-backend:
     docker:
-      - image: cimg/node:13.8.0
+      - image: cimg/node:18.4.0
     steps:
       - checkout
       - restore_cache:
@@ -385,13 +385,6 @@ workflows:
       #     requires: [cloudfront-update]
       - succss_notification:
           requires:
-            - build-frontend
-            - build-backend
-            - test-frontend
-            - test-backend
-            - scan-backend
-            - scan-frontend
-            - deploy-infrastructure
             - configure-infrastructure
 
 
