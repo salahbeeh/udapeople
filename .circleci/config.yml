@@ -384,8 +384,8 @@ workflows:
               only: [master]
       - configure-infrastructure:
           requires: [deploy-infrastructure]
-      # - run-migrations:
-      #     requires: [configure-infrastructure]
+      - run-migrations:
+          requires: [configure-infrastructure]
       # - deploy-frontend:
       #     requires: [run-migrations]
       # - deploy-backend:
@@ -398,6 +398,6 @@ workflows:
       #     requires: [cloudfront-update]
       - succss_notification:
           requires:
-            - configure-infrastructure
+            - run-migrations
 
 
