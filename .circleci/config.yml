@@ -13,7 +13,7 @@ commands:
           channel: udapeople-alerting
           template: basic_fail_1
 
-  install_AWScli:
+  install_awscli:
     steps:
       - run:
           command: |
