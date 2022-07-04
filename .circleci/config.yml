@@ -69,7 +69,7 @@ commands:
 jobs:
   build-frontend:
     docker:
-      - image: cimg/node:18.4.0
+      - image: cimg/node:15.0.1
     steps:
       - checkout
       - restore_cache:
@@ -78,12 +78,12 @@ jobs:
           name: Build front-end
           command: |
             cd frontend
-            # npm install
-            npm update
-            npm audit fix 
-            npm audit fix --force
+            npm install
+            # npm update
+            # npm audit fix 
+            # npm audit fix --force
             npm run build
-            npm audit fix --force
+            # npm audit fix --force
 
 
       - save_cache:
@@ -93,7 +93,7 @@ jobs:
 
   build-backend:
     docker:
-      - image: cimg/node:18.4.0
+      - image: cimg/node:15.0.1
     steps:
       - checkout
       - restore_cache:
@@ -111,7 +111,7 @@ jobs:
 
   test-frontend:
     docker:
-      - image: cimg/node:18.4.0
+      - image: cimg/node:15.0.1
     steps:
       - checkout
       - restore_cache:
@@ -126,7 +126,7 @@ jobs:
 
   test-backend:
     docker:
-      - image: cimg/node:18.4.0
+      - image: cimg/node:15.0.1
     steps:
       - checkout
       - restore_cache:
@@ -141,7 +141,7 @@ jobs:
 
   scan-frontend:
     docker:
-      - image: cimg/node:18.4.0
+      - image: cimg/node:15.0.1
     steps:
       - checkout
       - restore_cache:
@@ -158,7 +158,7 @@ jobs:
 
   scan-backend:
     docker:
-      - image: cimg/node:18.4.0
+      - image: cimg/node:15.0.1
     steps:
       - checkout
       - restore_cache:
