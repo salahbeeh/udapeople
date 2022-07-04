@@ -80,7 +80,7 @@ jobs:
             cd frontend
             # npm install
             npm update
-            npm audit fix --force 
+            npm audit fix  
             npm run build
 
       - save_cache:
