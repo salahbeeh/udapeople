@@ -213,6 +213,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
+      - install_awscli
       - install_ansible
       - add_ssh_keys:
           fingerprints: ["34:0d:60:21:db:cf:e7:76:e1:68:06:f5:61:4a:30:ed"]
@@ -223,7 +224,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            cd .circlci/ansible
+            cd .circleci/ansible
             cat inventory.txt
             ansible-playbook -i inventory.txt configure-sever.yml
       - destroy-environment 
