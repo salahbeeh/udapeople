@@ -409,7 +409,7 @@ jobs:
       - destroy-environment
   run-migrations:
     docker:
-      - image: cimg/node:13.8.0
+      - image: cimg/node:14.18.0
     steps:
       - checkout
       - install_awscli
