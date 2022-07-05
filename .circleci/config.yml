@@ -478,7 +478,6 @@ workflows:
       - cleanup:
           requires: [cloudfront-update]
       - succss_notification:
-          requires:
-            - cleanup
+          requires: [cleanup]
 
 
