@@ -248,10 +248,9 @@ jobs:
 
   run-migrations:
     docker:
-      - image: cimg/2022.06
+      - image: node
     steps:
       - checkout   
-      - install_nodejs
       - run:
           name: Run migrations
           command: |
