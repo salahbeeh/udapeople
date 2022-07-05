@@ -444,6 +444,6 @@ workflows:
       - succss_notification:
           requires:
             - deploy-backend
-            - deploy-frontendgf
+            - deploy-frontend
 
 
