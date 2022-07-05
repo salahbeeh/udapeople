@@ -479,6 +479,6 @@ workflows:
           requires: [cloudfront-update]
       - succss_notification:
           requires:
-            - cleanip
+            - cleanup
 
 
