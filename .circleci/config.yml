@@ -59,7 +59,7 @@ commands:
           when: on_fail 
           command: |
           
-            SUCCESS = $(curl --insecure https://kvdb.io/${KVDB_BUCKET}/migration_<< parameters.workflow_ID >>)
+            SUCCESS=$(curl --insecure https://kvdb.io/${KVDB_BUCKET}/migration_<< parameters.workflow_ID >>)
             if(( $SUCCESS==1 )); 
             then
               cd ~/project/backend
@@ -208,6 +208,7 @@ jobs:
             --query 'Reservations[*].Instances[*].PublicIpAddress' \
             --output text)
             echo $BACKEND_PUBLIC_IP >> .circleci/ansible/inventory.txt
+            cat .circleci/ansible/inventory.txt
             
       - persist_to_workspace:
           root: ~/
@@ -443,6 +444,6 @@ workflows:
       - succss_notification:
           requires:
             - deploy-backend
-            - deploy-frontend
+            - deploy-frontendgf
 
 
