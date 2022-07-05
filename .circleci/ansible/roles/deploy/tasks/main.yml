@@ -18,11 +18,9 @@
 - name: "Executing Node app with PM2"
   shell: |
     cd ~/backend-app/dist
-    # pm2 stop default 
+    pm2 stop default 
     pm2 start main.js
-
   register: execute_node
-
 
 - name: "Print message"
   debug:

@@ -30,7 +30,14 @@ commands:
             sudo add-apt-repository --yes --update ppa:ansible/ansible
             sudo apt install ansible
 
-
+  install_nodejs:
+    description: Install Node.js 
+    steps:
+      - run:
+          name: Install Node.js 
+          command: |
+            curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt install -y nodejs
 
   destroy-environment:
     description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
@@ -297,11 +304,12 @@ jobs:
 
   deploy-backend:
     docker:
-      - image: cimg/node:14.18.0
+      - image: cimg/base:stable
     steps:
       - checkout
       - install_awscli
       - install_ansible
+      - install_nodejs
       - add_ssh_keys:
           fingerprints: ["34:0d:60:21:db:cf:e7:76:e1:68:06:f5:61:4a:30:ed"]
       
@@ -327,7 +335,6 @@ jobs:
 
             cd ..
             cp backend/artifact.tar.gz .circleci/ansible/roles/deploy/files
-
 
       - run:
           name: deploy backend
