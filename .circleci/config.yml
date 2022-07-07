@@ -411,7 +411,7 @@ jobs:
           name: Update cloudfront distribution
           command: |
               aws cloudformation deploy \
-              --template-file .circleci/files/frontend.yml \
+              --template-file .circleci/files/cloudfront.yml \
               --stack-name "InitialStack" \
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}" 
 
