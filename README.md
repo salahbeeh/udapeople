@@ -27,5 +27,5 @@ This repo is submitted as partial fulfillment of the requirements of the 3rd pro
 ## Submission 
 - [✔️] ♾️ 1 > [12 Screenshots](https://github.com/salahbeeh/udapeople/tree/master/Screenshots/Screenshots)
 - [✔️] ♾️ 2 > [Urls screenshots](https://github.com/salahbeeh/udapeople/tree/master/Screenshots/Screenshots)
-- [✔️] ♾️ 3 > [Url txt]()
-- [✔️] ♾️ 4 > [Selling Ci/CD Presentation]()
+- [✔️] ♾️ 3 > [Url txt](https://github.com/salahbeeh/udapeople/blob/master/url.txt)
+- [✔️] ♾️ 4 > [Selling Ci/CD Presentation](https://github.com/salahbeeh/udapeople/blob/master/Presentation.pdf)
