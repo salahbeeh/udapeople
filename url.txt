@@ -2,14 +2,14 @@
 https://github.com/salahbeeh/udapeople
 
 [URL02]
-http://udapeople-150491f.s3-website-us-east-1.amazonaws.com
+http://udapeople-a6bb2f3.s3-website-us-east-1.amazonaws.com
 
 [URL03]
-d3n03pv0sc2kgo.cloudfront.net
+https://d3n03pv0sc2kgo.cloudfront.net
 
 [URL04]
-http://3.84.131.18:3030/api/status
+http://52.200.2.69:3030/api/status
 
 [URL05]
-3.80.198.180:9090
+44.203.117.70:9090
 
