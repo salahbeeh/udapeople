@@ -456,7 +456,7 @@ jobs:
 workflows:
   Give Your Application Auto-deploy Superpowers:
     jobs:
-      # - build-frontend
+      - build-frontend
       # - build-backend
       # - test-frontend:
       #     requires: [build-frontend]
